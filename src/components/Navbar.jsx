@@ -2,6 +2,8 @@ import React from 'react';
 import headerLogo from '../assets/header_logo.png';
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+
     return (
         <nav className="navbar" style={{
             backgroundColor: 'var(--pc-green-dark)',
@@ -27,17 +29,52 @@ const Navbar = () => {
                     </a>
                 </div>
 
-                <ul style={{ display: 'flex', listStyle: 'none', gap: '2rem', fontWeight: 700 }}>
-                    <li><a href="#about" style={{ transition: 'var(--transition)' }}>ABOUT</a></li>
-                    <li><a href="#priorities" style={{ transition: 'var(--transition)' }}>PRIORITIES</a></li>
-                    <li><a href="#news" style={{ transition: 'var(--transition)' }}>NEWS</a></li>
-                    <li><a href="#involved" style={{ transition: 'var(--transition)' }}>GET INVOLVED</a></li>
+                {/* Mobile Menu Toggle */}
+                <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    style={{
+                        display: 'none',
+                        backgroundColor: 'transparent',
+                        color: 'white',
+                        fontSize: '1.5rem',
+                        border: 'none',
+                        cursor: 'pointer'
+                    }}
+                    className="mobile-toggle"
+                >
+                    {isMenuOpen ? '✕' : '☰'}
+                </button>
+
+                <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`} style={{
+                    display: 'flex',
+                    listStyle: 'none',
+                    gap: '2rem',
+                    fontWeight: 700
+                }}>
+                    <li><a href="#about" onClick={() => setIsMenuOpen(false)}>ABOUT</a></li>
+                    <li><a href="#priorities" onClick={() => setIsMenuOpen(false)}>PRIORITIES</a></li>
+                    <li><a href="#news" onClick={() => setIsMenuOpen(false)}>NEWS</a></li>
+                    <li><a href="#involved" onClick={() => setIsMenuOpen(false)}>GET INVOLVED</a></li>
+                    <li className="mobile-only">
+                        <a
+                            href="https://fw.partyof.wales/donate"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                                color: 'var(--pc-yellow)',
+                                fontWeight: 900
+                            }}
+                        >
+                            DONATE
+                        </a>
+                    </li>
                 </ul>
 
                 <a
                     href="https://fw.partyof.wales/donate"
                     target="_blank"
                     rel="noopener noreferrer"
+                    className="desktop-only"
                     style={{
                         backgroundColor: 'var(--pc-yellow)',
                         color: 'var(--pc-black)',
@@ -50,8 +87,6 @@ const Navbar = () => {
                         display: 'inline-block',
                         textAlign: 'center'
                     }}
-                    onMouseDown={(e) => e.currentTarget.style.transform = 'translateY(2px)'}
-                    onMouseUp={(e) => e.currentTarget.style.transform = 'translateY(0)'}
                 >
                     DONATE
                 </a>

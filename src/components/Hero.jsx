@@ -22,15 +22,12 @@ const Hero = () => {
                 zIndex: 0
             }}></div>
 
-            <div className="container" style={{
-                display: 'grid',
-                gridTemplateColumns: '1.2fr 1fr',
+            <div className="container grid-2 mobile-center" style={{
                 alignItems: 'center',
-                gap: '4rem',
                 position: 'relative',
                 zIndex: 1
             }}>
-                <div>
+                <div className="mobile-center">
                     <h1 style={{ fontSize: '4.5rem', marginBottom: '1.5rem', lineHeight: 1 }}>
                         DEAN <br />
                         <span style={{ color: 'var(--pc-yellow)' }}>DAVIES</span>
@@ -41,7 +38,7 @@ const Hero = () => {
                     <p style={{ fontSize: '1.2rem', marginBottom: '2.5rem', maxWidth: '500px', opacity: 0.9 }}>
                         Join Dean Davies and the Plaid Cymru movement for a fairer, stronger Wales. Together, we can deliver real change for our local area.
                     </p>
-                    <div style={{ display: 'flex', gap: '1rem' }}>
+                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }} className="mobile-center">
                         <a
                             href="https://fw.partyof.wales/act"
                             target="_blank"

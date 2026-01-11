@@ -78,7 +78,7 @@ function App() {
 
                 {/* Biography Section */}
                 <section id="bio" style={{ padding: '6rem 0', background: 'white' }}>
-                    <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '4rem', alignItems: 'center' }}>
+                    <div className="container grid-2" style={{ alignItems: 'center' }}>
                         <div style={{ position: 'relative' }}>
                             <img
                                 src={candidateHero}
@@ -89,14 +89,14 @@ function App() {
                                 LOCAL & COMMITTED
                             </div>
                         </div>
-                        <div>
+                        <div className="mobile-center">
                             <h2 style={{ fontSize: '2.5rem', color: 'var(--pc-green-dark)', marginBottom: '1rem', lineHeight: '1.2' }}>
                                 A LOCAL VOICE FOR FFLINT AND WRECSAM
                             </h2>
                             <h3 style={{ fontSize: '1.3rem', color: 'var(--pc-green-vibrant)', marginBottom: '1.5rem' }}>
                                 Rooted in Buckley, Driven by Action
                             </h3>
-                            <div style={{ width: '60px', height: '4px', backgroundColor: 'var(--pc-yellow)', marginBottom: '2rem' }}></div>
+                            <div style={{ width: '60px', height: '4px', backgroundColor: 'var(--pc-yellow)', marginBottom: '2rem' }} className="mobile-hide"></div>
 
                             <p style={{ marginBottom: '1.2rem', fontSize: '1.1rem', color: '#333', fontWeight: 700 }}>
                                 I am Dean Davies, a proud Buckley resident and your Plaid Cymru candidate for 2026.
@@ -106,7 +106,7 @@ function App() {
                                 My career has been built on practical action, not just words. From renovating my own home to managing grounds for national sports teams, I believe in rolling up my sleeves to get the job done.
                             </p>
 
-                            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
+                            <div style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr)', gap: '1rem', marginBottom: '2rem', textAlign: 'left' }}>
                                 <div style={{ borderLeft: '3px solid var(--pc-yellow)', paddingLeft: '1rem' }}>
                                     <p style={{ fontSize: '0.95rem', color: '#555' }}>
                                         <strong>Community Leader:</strong> Leading efforts to regenerate a historic building into a vibrant community asset in Buckley.
