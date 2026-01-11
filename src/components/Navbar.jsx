@@ -45,12 +45,7 @@ const Navbar = () => {
                     {isMenuOpen ? '✕' : '☰'}
                 </button>
 
-                <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`} style={{
-                    display: 'flex',
-                    listStyle: 'none',
-                    gap: '2rem',
-                    fontWeight: 700
-                }}>
+                <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
                     <li><a href="#about" onClick={() => setIsMenuOpen(false)}>ABOUT</a></li>
                     <li><a href="#priorities" onClick={() => setIsMenuOpen(false)}>PRIORITIES</a></li>
                     <li><a href="#news" onClick={() => setIsMenuOpen(false)}>NEWS</a></li>

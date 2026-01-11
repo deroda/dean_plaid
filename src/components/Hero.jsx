@@ -79,9 +79,8 @@ const Hero = () => {
                 </div>
 
                 <div style={{ position: 'relative' }}>
-                    <div style={{
+                    <div className="hero-image-container" style={{
                         width: '100%',
-                        height: '500px',
                         backgroundColor: '#ddd',
                         borderRadius: 'var(--radius-lg)',
                         overflow: 'hidden',
