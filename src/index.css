@@ -1,0 +1,107 @@
+:root {
+  /* Plaid Cymru Brand Colors */
+  --pc-green-vibrant: #0aa77d;
+  --pc-green-mid: #008672;
+  --pc-green-dark: #075d55;
+  --pc-green-deep: #043932;
+  --pc-yellow: #ffe200;
+  --pc-red: #e1573e;
+  --pc-white: #ffffff;
+  --pc-black: #1a1a1a;
+
+  /* Typography */
+  --font-main: 'Roboto', sans-serif;
+
+  /* Spacing & Borders */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--pc-white);
+  color: var(--pc-black);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+a:hover {
+  opacity: 1;
+  color: var(--pc-yellow);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+/* Base Layout Utility */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Campaign Style Headlines */
+.campaign-heading {
+  transform: skewY(-2deg);
+  /* Subtle alternative to shear if complex to apply to text only */
+  display: inline-block;
+}
+
+.bg-dark-green {
+  background-color: var(--pc-green-dark);
+  color: var(--pc-white);
+}
+
+.bg-mid-green {
+  background-color: var(--pc-green-mid);
+  color: var(--pc-white);
+}
+
+.text-yellow {
+  color: var(--pc-yellow);
+}
+
+/* Premium Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-icon:hover {
+  background-color: var(--pc-yellow) !important;
+  color: var(--pc-black) !important;
+  transform: translateY(-3px);
+}
