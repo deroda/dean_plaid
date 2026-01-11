@@ -5,6 +5,9 @@ import PriorityCards from './components/PriorityCards';
 import NewsSection from './components/NewsSection';
 import Modal from './components/Modal';
 import { Facebook, Instagram } from 'lucide-react';
+import candidateHero from './assets/candidate_hero.jpg';
+import logoLight from './assets/logo_light.png';
+import logoDaffodil from './assets/logo_daffodil.png';
 
 function App() {
     const [activeModal, setActiveModal] = React.useState(null);
@@ -78,7 +81,7 @@ function App() {
                     <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '4rem', alignItems: 'center' }}>
                         <div style={{ position: 'relative' }}>
                             <img
-                                src="/src/assets/candidate_hero.jpg"
+                                src={candidateHero}
                                 alt="Dean Davies in the community"
                                 style={{ width: '100%', borderRadius: 'var(--radius-lg)', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
                             />
@@ -201,7 +204,7 @@ function App() {
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '3rem' }}>
                             <div>
                                 <img
-                                    src="/src/assets/logo_light.png"
+                                    src={logoLight}
                                     alt="Plaid Cymru Logo"
                                     style={{ height: '35px', width: 'auto', marginBottom: '1.5rem' }}
                                 />

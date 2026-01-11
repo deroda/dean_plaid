@@ -1,4 +1,5 @@
 import React from 'react';
+import candidateHero from '../assets/candidate_hero.jpg';
 
 const Hero = () => {
     return (
@@ -88,7 +89,7 @@ const Hero = () => {
                         borderRadius: 'var(--radius-lg)',
                         overflow: 'hidden',
                         boxShadow: '20px 20px 0 var(--pc-green-mid)',
-                        backgroundImage: 'url("/src/assets/candidate_hero.jpg")', // Actual candidate photo
+                        backgroundImage: `url("${candidateHero}")`, // Actual candidate photo
                         backgroundSize: 'cover',
                         backgroundPosition: 'center'
                     }}>

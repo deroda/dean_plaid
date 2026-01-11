@@ -1,4 +1,5 @@
 import React from 'react';
+import headerLogo from '../assets/header_logo.png';
 
 const Navbar = () => {
     return (
@@ -19,7 +20,7 @@ const Navbar = () => {
                 <div className="logo" style={{ display: 'flex', alignItems: 'center' }}>
                     <a href="#about" style={{ display: 'flex', alignItems: 'center' }}>
                         <img
-                            src="/src/assets/header_logo.png"
+                            src={headerLogo}
                             alt="Plaid Cymru Logo"
                             style={{ height: '40px', width: 'auto' }}
                         />
